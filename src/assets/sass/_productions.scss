@@ -1,0 +1,66 @@
+.content-page-prod{
+  padding-top: 30px;
+    h1, h2, h3, h4, h5, h6, p {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 30px;
+      font-family: $font_big;
+    }
+    p {
+      font-family: $font_body;
+    }
+}
+
+#apwp-audio-grid-player-wrp{
+  padding-top: 50px;
+}
+
+.apwpultimate-audio-player-innr-wrap {
+  overflow: hidden;
+}
+
+.apwp-jplayer-design-overide .jp-video-270p {
+    width: 100%;
+}
+
+.jp-video-270p {
+  width: 100%;
+}
+
+.jp-audio {
+    width: 100%;
+}
+
+
+/**** responsive ****/
+@include minmaxwidth(sm, lg) {
+  .apwp-medium-2, .apwp-medium-7 {
+    width: 100%;
+  }
+  .jp-controls {
+    text-align: center;
+  }
+  .apwp-jplayer-design-overide.apwpultimate-layout-1 .jp-type-single .apwp-medium-7 .jp-progress {
+    margin-top: 10px;
+  }
+  .jp-time-holder.position-unset {
+    margin-bottom: 10px;
+  }
+}
+@include maxwidth(lg) {
+  .jp-details .jp-title{
+    font-size: 16px !important;
+  }
+}
+@include maxwidth(sm) {
+  .content-page-prod h1 {
+    font-size: 30px;
+  }
+}
+@include maxwidth(xs) {
+  .apwp-jplayer-design-overide.apwpultimate-layout-1 .jp-type-single .jp-details {
+    margin-top: 50px;
+  }
+}

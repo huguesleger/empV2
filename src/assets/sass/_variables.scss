@@ -1,0 +1,15 @@
+$color_grey_light : #eff2f6;
+$color_red : #ff5252;
+$color_blue : #2faaaa;
+$color_vertlight : #53eab2;
+
+$color_primary: $color_blue;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+$font_body: 'Open Sans', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Prompt:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+$font_big: 'Prompt', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+$font_primary: 'Montserrat', sans-serif;

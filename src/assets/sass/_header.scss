@@ -1,0 +1,282 @@
+/*-----header------*/
+.header {
+	width: 100%;
+	height: 100vh;
+}
+
+/*-----------------------
+-------mode images-------
+-----------------------*/
+
+.header-image {
+	height: 590px;
+	position: relative;
+}
+
+.header-image .enter-content .enter {
+color: #fff;
+}
+
+.wrap-slider {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.bg-illu {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	&::before {
+		content:'';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
+	}
+}
+
+
+/*-----------------------
+-------mode slider-------
+-----------------------*/
+
+.slider {
+	position: relative;
+	height: 100vh;
+}
+
+.main-slider {
+	margin-bottom: 0 !important;
+}
+
+.main-slider .slick-slide {
+	position: relative !important;
+}
+
+.main-slider .slider-img {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
+}
+
+/*-----txt-slider------*/
+.main-slider-caption {
+	margin: auto;
+	outline: none;
+	width: 60%;
+}
+
+.slider .main-slider-caption {
+  position: absolute;
+	width: 100%;
+  top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.slider .caption-txt {
+	left: 25%;
+	width: 32%;
+	position: absolute;
+	opacity: 0;
+	top: 30%;
+	&.__slider-show {
+		opacity: 1;
+	}
+}
+
+.main-slider-caption h1 {
+	font-size: 42px;
+	margin-bottom: 30px;
+
+}
+.main-slider-caption p {
+	font-size: 18px;
+	margin-bottom: 50px;
+	white-space: pre-wrap;
+}
+
+.slider .slider-item.slick-cloned .caption-txt {
+	  opacity: 0;
+}
+
+	.enter-content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		.enter {
+		color: #fff;
+		font-size: 35px;
+		margin-bottom: 20px;
+		cursor: pointer;
+			span {
+				font-size: 13px;
+		    display: block;
+		    text-align: center;
+			}
+			svg {
+					animation: rotation 2s infinite linear;
+			}
+	}
+	}
+
+
+@keyframes rotation {
+		from {
+				transform: rotate(0deg);
+		}
+		to {
+				transform: rotate(359deg);
+		}
+}
+
+/*-----------------------
+-------mode slider texte-------
+-----------------------*/
+
+
+.slider-txt {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	width: 100%;
+	height: 90%;
+	overflow: hidden;
+	padding: 50px;
+	padding-right: 0;
+	padding-left: 0;
+	z-index: 2;
+	opacity: 0;
+	&.__slider-txt-show {
+		opacity: 1;
+	}
+}
+
+.slider-txt .main-slider-caption {
+color: #fff;
+padding: 50px 0;
+position: relative;
+overflow: hidden;
+}
+
+
+.main-slider-caption h1 {
+	font-family: $font_big;
+	font-weight: 900;
+	font-size: 60px;
+}
+
+.slider-txt .slider-item.slick-cloned .main-slider-caption {
+	  opacity: 0;
+}
+
+ .slider-item.slick-active h1{
+  animation:fadeInUp 1s both 1s;
+}
+
+.slider-item.slick-active p{
+  animation:fadeInLeft 1s both 1.5s;
+}
+
+.slider-item.slick-active a{
+  animation:fadeIn 1s both 2s;
+}
+
+.caption-btn{
+	position: absolute;
+	bottom: 0;
+}
+
+.slider .caption-btn {
+	bottom: -30px;
+}
+
+/**** responsive ****/
+@include minmaxwidth(sm, lg) {
+  .slider {
+    height: 590px;
+}
+}
+
+@include minmaxwidthlandscape(md, lg) {
+	.slider .caption-txt {
+		width: 50%;
+	}
+}
+@include maxwidthlandscape(sm) {
+	.main-slider-caption {
+		text-align: center;
+	}
+	.main-slider-caption h1 {
+		margin-bottom: 15px;
+	}
+	.enter-content {
+		display: none;
+	}
+}
+@include maxwidth(md) {
+	.slider .caption-txt {
+		width: 50%;
+	}
+	.main-slider-caption h1 {
+		font-size: 45px;
+	}
+}
+
+@include maxwidth(sm) {
+	.slider {
+		position: relative;
+		height: 390px;
+	}
+
+	.header-image {
+		height: 390px;
+		position: relative;
+	}
+	.main-slider-caption {
+		width: 80%;
+	}
+	.caption-btn {
+		display: none;
+	}
+}
+
+@include maxwidth(xs) {
+	.slider .caption-txt {
+		width: 100%;
+		left: 0;
+		top: 35%;
+	}
+	.slick-prev, .slick-next {
+		display: none !important;
+	}
+  .main-slider-caption h1 {
+		font-size: 30px;
+		text-align: center;
+		margin-bottom: 15px;
+  }
+	.main-slider-caption p {
+		font-size: 14px;
+		text-align: center;
+	}
+	.enter-content {
+		display: none;
+	}
+}

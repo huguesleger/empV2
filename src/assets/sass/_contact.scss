@@ -1,0 +1,140 @@
+.contact-header-no-img .contact {
+  margin-top: 190px;
+}
+
+.wrap-contact-title {
+  padding: 90px 90px 0 90px;
+}
+
+.contact-content {
+  background-color: $color_primary;
+  margin-top: -150px;
+}
+
+.content-form {
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+
+.content-infos{
+  padding: 20px 0 20px 30px;
+}
+
+.title-infos {
+  margin-bottom: 20px;
+    h3{
+      font-family: $font_big;
+      font-size: 35px;
+      font-weight: 700;
+    }
+}
+
+.infos-list {
+  list-style-type: none;
+  padding-left:0;
+  font-size: 16px;
+    li {
+      padding: 5px 0;
+        svg {
+          margin-right: 10px;
+        }
+    }
+}
+
+
+/*----------form-----------*/
+
+  .form-contact .form-group {
+    background-color: rgba(white, .8);
+    border: none;
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 20px;
+    transition:  all 0.3s ease-out;
+    &focus{
+        background-color: #fff;
+        border: solid 1px #000;
+    }
+}
+
+.form-contact p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.form-contact textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+.form-contact .fields {
+  margin-top: 10px;
+  padding-bottom: 15px;
+  font-size: 12px;
+}
+
+
+ .form-contact .form-control {
+     background-color: transparent;
+     padding: 0;
+     border: none;
+     border-radius: 0;
+     box-shadow: none;
+     height: auto;
+     position: relative;
+     z-index: 2;
+     font-size: 18px;
+     color: #000;
+}
+
+/***********message reponse**************/
+
+div.wpcf7-response-output {
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+span.wpcf7-not-valid-tip {
+  color: #d9534f;
+}
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+  background-color: #f0ad4e;
+  border: none;
+}
+
+div.wpcf7-mail-sent-ok {
+  background-color: #5cb85c;
+  border: none;
+}
+
+div.wpcf7-mail-sent-ng, div.wpcf7-aborted {
+  background-color: #d9534f;
+  border: none;
+}
+
+div.wpcf7 .ajax-loader {
+  display: none;
+}
+
+
+/***********responsive**************/
+@include maxwidth(sm) {
+  .wrap-contact-title {
+      padding: 30px 0 0;
+  }
+
+  .content-form {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form-contact .fields {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
